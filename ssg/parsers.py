@@ -6,15 +6,15 @@ class Parser:
     def valid_extension(self,extension):
         return extension in self.extensions
 
-    def parse(path,source,dest):
+    def parse(self,path,source,dest):
         raise NotImplementedError
 
-    def read(path):
+    def read(self,path):
          # using with statement
          with open(path, 'r') as file:
 	         return file.read()
 
-    def write(path,dest,content,ext=".html"):
+    def write(self,path,dest,content,ext=".html"):
         full_path=dest /path.with_suffix(ext).name
         with open(path, 'w') as file:
             file.write(content)
