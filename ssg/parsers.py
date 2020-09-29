@@ -9,7 +9,7 @@ class Parser:
         else:
             return False
 
-    def parse(Path path, Path source,Path dest):
+    def parse(path,source,dest):
         raise NotImplementedError
 
     def read(path):
@@ -23,4 +23,4 @@ class Parser:
              file.write(content)
 
     def copy(self,path,source,dest):
-        shutil.copy2(path, dest/ path.relative_to(source)) 
+        shutil.copy2(path, dest/ path.relative_to(source))
