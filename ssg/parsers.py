@@ -4,7 +4,7 @@ import shutil
 class Parser:
     extensions:List[str]=[]
     def valid_extension(self,extension):
-        return extension in self.extensions:
+        return extension in self.extensions
 
     def parse(path,source,dest):
         raise NotImplementedError
